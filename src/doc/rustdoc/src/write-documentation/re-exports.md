@@ -56,7 +56,7 @@ mod private_module {
     pub struct Public;
 }
 pub mod public_mod {
-    // `Public` will inlined here since `private_module` is private.
+    // `Public` will be inlined here since `private_module` is private.
     pub use super::private_module::Public;
 }
 // `Public` will not be inlined here since `public_mod` is public.
